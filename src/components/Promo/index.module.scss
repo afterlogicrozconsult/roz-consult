@@ -1,0 +1,165 @@
+@import "src/mixin/queries";
+
+.promo {
+  background: center/cover no-repeat url("../../../src/assets/images/promo-bg.png");
+  padding: 0 100px;
+  @include mediaMobile {
+    padding: 0 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), center/cover no-repeat url("../../../src/assets/images/promo-bg.png");
+  }
+  @include mediaMobileSmall {
+    padding: 0 10px;
+  }
+
+  &Wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1404px;
+    margin: 0 auto;
+    padding: 0 0 350px 0;
+    @include mediaTablet {
+      padding: 0 0 157px 0;
+    }
+    @include mediaMobile {
+      padding: 0 0 40px 0;
+    }
+  }
+
+  &Info {
+    position: relative;
+    z-index: 3;
+    max-width: 685px;
+    padding-top: 80px;
+    @include mediaTablet {
+      padding-top: 40px;
+    }
+    @include mediaMobileSmall {
+      padding-top: 30px;
+    }
+  }
+
+  &Title {
+    font: 600 60px/120% 'Inter', sans-serif;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    @include mediaMobile {
+      font: 600 40px/120% 'Inter', sans-serif;
+    }
+  }
+
+  &Description {
+    font: 400 14px/150% 'Inter', sans-serif;
+    color: #D0D0D0;
+    margin-bottom: 30px;
+    max-width: 570px;
+    @include mediaMobile {
+      font: 400 16px/150% 'Inter', sans-serif;
+      margin-bottom: 142px;
+      max-width: 285px;
+    }
+    @include mediaMobileSmall {
+      font: 400 14px/150% 'Inter', sans-serif;
+      margin-bottom: 30px;
+      max-width: 285px;
+    }
+  }
+
+  &Btn {
+    display: inline-block;
+    font: 600 16px/19px 'Inter';
+    color: #FD7009;
+    padding: 15px 60px;
+    border: 1px solid #FD7009;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    @include mediaMobile {
+      width: 100%;
+      background: #FD7009;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    &:hover {
+      background: #FD7009;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.parallaxBlock {
+
+  &Img1 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    top: 24%;
+    right: 27%;
+    transform: rotate(-15deg);
+    @media screen and (max-width: 1400px) {
+      opacity: 0.4;
+    }
+    @include mediaTablet {
+      width: 220px;
+      height: 220px;
+      top: 40%;
+      right: 27%;
+      opacity: 0.4;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &Img2 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 24%;
+    right: 0;
+    transform: rotate(25deg);
+    @media screen and (max-width: 1400px) {
+      opacity: 0.4;
+    }
+    @include mediaTablet {
+      width: 100px;
+      height: 100px;
+      top: 40%;
+      right: 0;
+      opacity: 0.4;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &Img3 {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    bottom: 15%;
+    right: 20%;
+    transform: rotate(8deg);
+    @media screen and (max-width: 1400px) {
+      opacity: 0.4;
+    }
+    @include mediaTablet {
+      width: 80px;
+      height: 80px;
+      opacity: 0.4;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

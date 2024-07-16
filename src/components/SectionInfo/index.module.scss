@@ -1,0 +1,116 @@
+@import "src/mixin/queries";
+
+.sectionInfo {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 0;
+  @include mediaMobile {
+    padding: 40px 20px;
+  }
+  @include mediaMobileSmall {
+    padding: 40px 10px;
+  }
+
+  &Block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mediaMobile {
+      flex-direction: column;
+    }
+
+    &Top {
+      margin-bottom: 74px;
+      @include mediaTablet {
+        margin-bottom: 30px;
+      }
+      @include mediaMobile {
+        margin-bottom: 60px;
+      }
+      @include mediaMobileSmall {
+        flex-direction: column-reverse;
+        margin-bottom: 30px;
+      }
+    }
+
+    &Bottom {
+      @include mediaMobile {
+        flex-direction: column-reverse;
+      }
+      @include mediaMobileSmall {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &Text {
+    width: 100%;
+    max-width: 450px;
+    margin-left: 100px;
+    margin-right: 30px;
+    @include mediaDesktopSmall {
+      margin-left: 80px;
+      max-width: 340px;
+    }
+    @media screen and (max-width: 940px) {
+      margin-left: 30px;
+      max-width: 340px;
+    }
+    @include mediaMobile {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    &Right {
+      margin-right: 100px;
+      margin-left: 30px;
+      @include mediaDesktopSmall {
+        margin-right: 80px;
+      }
+      @media screen and (max-width: 940px) {
+        margin-right: 30px;
+      }
+      @include mediaMobile {
+        max-width: 100%;
+        margin: 0 0 30px 0;
+      }
+      @include mediaMobileSmall {
+        max-width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  &Title {
+    font: 600 22px/130% 'Inter';
+    color: #F87908;
+    margin-bottom: 15px;
+    @include mediaMobileSmall {
+      margin-bottom: 12px;
+    }
+  }
+
+  &Description {
+    font: 400 14px/150% 'Inter';
+    color: #282828;
+  }
+
+  &Img {
+    width: 685px;
+    height: 420px;
+    @include mediaMobile {
+      width: 100%;
+      height: 360px;
+    }
+    @include mediaMobileSmall {
+      margin-bottom: 30px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

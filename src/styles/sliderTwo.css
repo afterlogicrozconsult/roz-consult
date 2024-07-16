@@ -1,0 +1,138 @@
+.card {
+    width: 360px;
+    height: 480px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: all 1s ease;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 480px;
+    right: 45%;
+}
+
+.card1 {
+    z-index: 1000;
+    left: 0;
+}
+
+.card2 {
+    z-index: 999;
+    transform: scale(0.99);
+    filter: brightness(0.9);
+    left: 90px;
+    top: 20px;
+}
+
+.card3 {
+    z-index: 998;
+    transform: scale(0.98);
+    filter: brightness(0.8);
+    left: 180px;
+    top: 40px;
+}
+
+.card4 {
+    z-index: 997;
+    transform: scale(0.97);
+    filter: brightness(0.7);
+    left: 270px;
+    top: 60px;
+    animation-name: remove;
+    animation-duration: 1s;
+}
+
+.card5, .card6, .card7, .card8, .card9,
+.card10, .card11, .card12, .card13, .card14,
+.card15, .card16, .card17, .card18, .card19,
+.card20, .card21, .card22, .card23, .card24,
+.card25, .card26, .card27, .card28, .card28,
+.card29, .card30, .card31, .card32, .card33,
+.card34, .card35, .card36, .card37, .card38,
+.card39, .card40, .card41, .card42, .card43,
+.card44, .card45, .card46, .card47, .card48,
+.card49, .card50 {
+    z-index: 996;
+    transform: scale(0.96);
+    filter: brightness(0.6);
+    left: 270px;
+    top: 60px;
+}
+
+.slick-dots li button:before {
+    display: none;
+}
+
+@keyframes remove {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+    51% {
+        transform: translateX(10px) scale(0.97);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px) scale(0.97);
+        opacity: 1;
+    }
+}
+
+.slick-slider .slick-dots {
+    position: absolute;
+    bottom: 65px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+}
+
+.slick-slider .slick-dots li {
+    margin: 0 5px;
+    height: 9px;
+}
+
+.slick-slider .slick-dots li button {
+    background: #BFBEBE;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.slick-slider .slick-dots li.slick-active button {
+    background: #FD7009;
+}
+
+.slick-dots li button:before {
+    opacity: 0;
+    outline: 1px solid red;
+}
+
+/*.slick-slider .slick-dots li.slick-active button:before {*/
+/*    display: none;*/
+/*}*/
+
+/*.slick-dots li button:before {*/
+/*    display: none;*/
+/*}*/
+
+/*.slick-dots li button:before.slick-active {*/
+/*    display: none;*/
+/*}*/
+
+/*.slick-dots li button:before {*/
+/*    display: none;*/
+/*}*/

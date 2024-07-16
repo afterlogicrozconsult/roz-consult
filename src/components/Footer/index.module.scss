@@ -1,0 +1,189 @@
+@import "src/mixin/queries";
+
+.footer {
+  background: #FD7009;
+  padding: 0 80px;
+  @media screen and (max-width: 900px) {
+    flex-direction: column-reverse;
+    padding: 0 20px;
+  }
+  @include mediaMobileSmall {
+    padding: 0 10px;
+  }
+
+  &Wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1404px;
+    margin: 0 auto;
+    padding: 80px 0;
+    @media screen and (max-width: 900px) {
+      flex-direction: column-reverse;
+      padding: 40px 0 20px;
+    }
+  }
+
+  &Header {
+    font: 700 23px/120% 'Inter';
+    color: #FFFFFF;
+    margin-bottom: 52px;
+    @media screen and (max-width: 900px) {
+      margin-bottom: 33px;
+    }
+
+    &Right {
+      margin-bottom: 40px;
+      @media screen and (max-width: 900px) {
+        margin-bottom: 33px;
+      }
+    }
+  }
+
+  &Left {
+    width: 100%;
+    max-width: 420px;
+    margin-right: 255px;
+    @include mediaTablet {
+      margin-right: 103px;
+    }
+    @media screen and (max-width: 900px) {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &Input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    opacity: 0.8;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 11px 0;
+    font: 600 12px/15px 'Inter';
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+
+    &::placeholder {
+      font: 600 12px/15px 'Inter';
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+
+  &Subscription {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    cursor: pointer;
+
+    &Img {
+      margin-right: 10px;
+    }
+  }
+
+  &Agree {
+    font: 400 14px/140% 'Inter';
+    color: #FFFFFF;
+
+    a {
+      font: 400 14px/140% 'Inter';
+      color: #FFFFFF;
+    }
+  }
+
+  &Btn {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    font: 600 17px/17px 'Inter';
+    color: #FD0909;
+    padding: 19px 0;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &SubTitle {
+    font: 700 18px/170% 'Inter';
+    color: #FFFFFF;
+    margin-bottom: 15px;
+  }
+
+  &Right {
+    span, a {
+      font: 400 12px/130% 'Inter';
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+
+    a {
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &Privacy {
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+
+      &Mobile {
+        display: none;
+        @media screen and (max-width: 900px) {
+          display: block;
+          font: 400 12px/130% 'Inter';
+          color: #FFFFFF;
+          margin-bottom: 10px;
+          text-decoration: none;
+          margin-top: 20px;
+          @include mediaMobileSmall {
+            text-align: center;
+            margin: 20px auto 0;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      &Info {
+        display: flex;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &RightInner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    @media screen and (max-width: 900px) {
+      &:first-child {
+        margin-right: 190px;
+        @include mediaMobileSmall {
+          margin-right: 60px;
+        }
+      }
+    }
+  }
+
+  &ArrowDown {
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    transition: opacity .3s ease;
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

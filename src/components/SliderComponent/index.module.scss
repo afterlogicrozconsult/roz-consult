@@ -1,0 +1,126 @@
+@import "src/mixin/queries";
+
+.card {
+  &Wrapper {
+    width: 100%;
+    max-width: 1205px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 760px;
+    @media screen and (max-width: 1300px) {
+      padding-left: 80px;
+    }
+    @include mediaTablet {
+      display: none;
+    }
+  }
+
+  &Right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 480px;
+    height: 310px;
+    img {
+      cursor: pointer;
+    }
+  }
+
+  &Title {
+    font: 700 48px/110% 'Inter';
+    color: #FD7009;
+    margin-bottom: 25px;
+  }
+
+  &Position {
+    font: 700 24px/130% 'Inter';
+    color: #FD7009;
+    margin-bottom: 10px;
+  }
+
+  &Description {
+    font: 400 16px/130% 'Inter';
+    color: #282828;
+  }
+
+  &Arrows {
+    display: flex;
+    align-items: center;
+  }
+
+  &ArrowRight {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &ArrowLeft {
+    margin-right: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.slider {
+  display: none;
+  @include mediaTablet {
+    position: relative;
+    display: block;
+    padding: 0 20px 125px 20px;
+  }
+  @include mediaMobile {
+    position: relative;
+    display: block;
+    padding: 0 20px 125px 20px;
+  }
+  @include mediaMobileSmall {
+    position: relative;
+    display: block;
+    padding: 0 10px 125px 10px;
+  }
+
+  &Title {
+    font: 700 30px/110% 'Inter';
+    color: #F27208;
+    margin-bottom: 10px;
+  }
+
+  &Position {
+    font: 700 20px/130% 'Inter';
+    color: #000000;
+    margin-bottom: 25px;
+  }
+
+  &Img {
+    width: 100%;
+    height: 700px;
+    margin: 0 auto 25px auto;
+    @include mediaMobile {
+      width: 100%;
+      height: 600px;
+    }
+    @media screen and (max-width: 500px) {
+      height: 400px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &Description {
+    font: 400 14px/140% 'Inter';
+    color: #282828;
+  }
+}
+
+
+
+
